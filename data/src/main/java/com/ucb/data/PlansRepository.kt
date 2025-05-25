@@ -1,12 +1,12 @@
 package com.ucb.data
 
-import com.ucb.data.plans.ISubscriptionPlanDataSource
+import com.ucb.data.plans.IPlansDataSource
 import com.ucb.domain.Plans
 
-class SubscriptionRepository(
-    private val remoteDataSource: ISubscriptionPlanDataSource
+class PlansRepository(
+    private val remoteDataSource: IPlansDataSource
 ) {
-    suspend fun getSubscriptionPlans(): List<Plans> {
+    suspend fun getPlans(): List<Plans> {
         return remoteDataSource.getPlans()
     }
 }
